@@ -19,7 +19,7 @@ app.get("/about", (request, response) => {
 
 // route for the not found page (404)
 app.use((request, response) => {
-  response.sendFile(path.join(__dirname, "public", "not-found.html"));
+  response.sendFile(path.join(__dirname, "public", "notFound.html"));
 });
 
 //start the server
