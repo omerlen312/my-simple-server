@@ -17,6 +17,11 @@ app.get("/about", (request, response) => {
   response.send("about is mid...");
 });
 
+// route for the not found page (404)
+app.use((request, response) => {
+  response.sendFile(path.join(__dirname, "public", "not-found.html"));
+});
+
 //start the server
 app.listen(PORT, () => {
   console.log(`server listening at port:${PORT}`);
